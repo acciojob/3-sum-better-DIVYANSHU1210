@@ -9,7 +9,7 @@ function threeSum(arr, target) {
 		while(p<q){
 			let sum = arr[p] + arr[q] + arr[i];
 			if(Math.abs(target-sum) < min_diff){
-				min_diff == target - sum;
+				min_diff = target - sum;
 				ans = sum;
 			}
 
