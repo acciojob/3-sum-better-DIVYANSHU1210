@@ -3,7 +3,7 @@ function threeSum(arr, target) {
 	arr.sort((a,b)=>a-b);
 	let min_diff = Number.MAX_VALUE;
 	let ans = 0;
-	for(let i=0; i<arr.length; i++){
+	for(let i=0; i<arr.length-2; i++){
 		let p = i+1; 
 		let q = arr.length - 1;
 		while(p<q){
@@ -13,7 +13,7 @@ function threeSum(arr, target) {
 				ans = sum;
 			}
 
-			if(target < sum){
+			if(sum < target){
 				p++;
 			}
 			else q--;
